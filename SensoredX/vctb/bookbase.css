@@ -1,0 +1,122 @@
+﻿@import url("http://fonts.googleapis.com/css?family=Questrial:400|Mate:400italic");
+
+html, body
+{
+	margin: 0px;
+	height: 100%;
+	overflow: hidden;
+	background-color: white;
+	font-size: 12pt;
+	font-family: 'Questrial', Verdana, Arial, Sans-Serif;
+	letter-spacing: 0.5pt;
+	line-height: 16pt;
+}
+
+/*
+	Default style for the [background] region that contains all of the pages.
+*/
+#idBook
+{
+	height: 100%;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 0;
+
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select:none; 
+	user-select:none;
+}
+
+/*
+	Represents a full window page frame.  Pages inheret this which can be 
+	modified if the user resizes the browser.
+*/
+
+.pageFrame
+{
+	left: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+
+.pageFrameFloater
+{
+	position: absolute;
+	margin: 0px;
+	height: 100%;
+	overflow: hidden;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+
+/* 
+	Locates the center of the window (container.) A child element can then position
+	itself around the top-left of this (its parent) to be centered.
+ */
+.frameCenterLocator
+{
+	position: relative;
+	width: 10px;
+	height: 1px;
+	top: 50%;
+	left: 50%;
+}
+
+/*
+	A standard (maximum size) page centered in the window/frame.  To work 
+	correctly this must be a child of a .frameCenterLocator classed element.
+*/
+.pageCenteredInFrame
+{
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	top: -300px;
+	left: -400px;
+	border-collapse: collapse;
+}
+
+/*
+	The font used for figure captions.
+*/
+.figureFont
+{
+	font-size: 16pt;
+	font-family: 'Mate', Palatino Linotype, Palatino, Times New Roman, Serif;
+	font-style:italic;
+	line-height: 16pt;
+}
+
+/*
+	The font used for contents entries.
+*/
+.contentsFont
+{
+	cursor:pointer;
+	font-size: 18pt;
+	font-family: 'Questrial', Palatino Linotype, Palatino, Times New Roman, Serif;
+	letter-spacing: 0.5pt;
+	line-height: 32pt;
+}
+
+/*
+	The style of the plane used to capture gestures.
+*/
+#idGestureLayer
+{
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	position: absolute;
+	background-color: Black;
+	opacity: 0;
+}
